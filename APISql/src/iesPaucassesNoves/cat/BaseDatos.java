@@ -52,9 +52,15 @@ public class BaseDatos {
 	 * la interfície operacions
 	 * @param objecte
 	 * @return
+	 * @throws SqlDBException 
 	 */
-	public int insert(OperacionsSQL objecte) {
+	public int insert(OperacionsSQL objecte) throws SqlDBException {
 		// TODO Auto-generated method stub
+		if (objecte == null){
+			throw new SqlDBException();
+		}
+		System.out.println(objecte.insert());		
+		
 		int columnas = 8;
 		return columnas;
 	}
@@ -64,9 +70,14 @@ public class BaseDatos {
 	 * la interfície operacions
 	 * @param objecte
 	 * @return
+	 * @throws ExceptionPropies 
 	 */
-	public int delete(OperacionsSQL objecte) {
+	public int delete(OperacionsSQL objecte) throws SqlDBException {
 		// TODO Auto-generated method stub
+		if (objecte == null){
+			throw new SqlDBException();
+		}
+		System.out.println(objecte.delete());
 		int columnas = 8;
 		return columnas;
 	}
@@ -76,10 +87,16 @@ public class BaseDatos {
 	 * la interfície operacions
 	 * @param objecte
 	 * @return
+	 * @throws ExceptionPropies 
 	 */
-	public int update(OperacionsSQL objecte) {
+	public int update(OperacionsSQL objecte) throws SqlDBException {
 		// TODO Auto-generated method stub
+		if (objecte == null){
+			throw new SqlDBException();
+		}
+		System.out.println(objecte.update());
 		int columnas = 8;
 		return columnas;
 	}
+
 }
