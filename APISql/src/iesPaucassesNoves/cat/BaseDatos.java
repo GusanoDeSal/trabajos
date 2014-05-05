@@ -53,8 +53,9 @@ public class BaseDatos {
 	 * @param objecte
 	 * @return
 	 * @throws SqlDBException 
+	 * @throws StockException 
 	 */
-	public int insert(OperacionsSQL objecte) throws SqlDBException {
+	public int insert(OperacionsSQL objecte) throws SqlDBException, StockException {
 		// TODO Auto-generated method stub
 		if (objecte == null){
 			throw new SqlDBException();
@@ -70,9 +71,10 @@ public class BaseDatos {
 	 * la interfície operacions
 	 * @param objecte
 	 * @return
+	 * @throws StockException 
 	 * @throws ExceptionPropies 
 	 */
-	public int delete(OperacionsSQL objecte) throws SqlDBException {
+	public int delete(OperacionsSQL objecte) throws SqlDBException, StockException {
 		// TODO Auto-generated method stub
 		if (objecte == null){
 			throw new SqlDBException();
@@ -87,9 +89,10 @@ public class BaseDatos {
 	 * la interfície operacions
 	 * @param objecte
 	 * @return
+	 * @throws StockException 
 	 * @throws ExceptionPropies 
 	 */
-	public int update(OperacionsSQL objecte) throws SqlDBException {
+	public int update(OperacionsSQL objecte) throws SqlDBException, StockException {
 		// TODO Auto-generated method stub
 		if (objecte == null){
 			throw new SqlDBException();

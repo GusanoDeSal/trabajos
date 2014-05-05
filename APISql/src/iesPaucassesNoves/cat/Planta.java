@@ -40,23 +40,44 @@ public class Planta extends Producte implements OperacionsSQL{
 		this.alzada = alzada;
 	}
 
-	@Override
-	public String insert() {
+
+	/**
+	 * Creamos un metodo nuevo de insercion para no sobre escribir
+	 * el metodo inserir del padre. De esta manera podemos hacer que
+	 * sea el metodo del padre que capture el error.
+	 * @return
+	 * @throws StockException
+	 */
+	public String inserthijo() throws StockException {
 		// TODO Auto-generated method stub
+		System.out.println(super.insert() + getNomCientific() + getInterior_exterior() + getFrecuenciaReg() + getAlzada());						
 		return super.insert();
 	}
 	
-	@Override
-	public String delete() {
+	/**
+	 * Creamos un metodo nuevo de eliminacion para no sobre escribir
+	 * el metodo delete del padre. De esta manera podemos hacer que
+	 * sea el metodo del padre que capture el error.
+	 * @return
+	 * @throws StockException
+	 */
+	public String deletehijo() throws StockException {
 		// TODO Auto-generated method stub
+		System.out.println(super.insert() + getNomCientific() + getInterior_exterior() + getFrecuenciaReg() + getAlzada());	
 		return super.delete();
 	}
 	
-	@Override
-	public String update() {
+	/**
+	 * Creamos un metodo nuevo de modificacion para no sobre escribir
+	 * el metodo update de padre. De esta manera podemos hacer que
+	 * sea el metodo del padre que capture el error.
+	 * @return
+	 * @throws StockException
+	 */
+	public String updatehijo() throws StockException {
 		// TODO Auto-generated method stub
+		System.out.println(super.insert() + getNomCientific() + getInterior_exterior() + getFrecuenciaReg() + getAlzada());	
 		return super.update();
 	}
-	
 	
 }

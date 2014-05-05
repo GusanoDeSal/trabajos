@@ -23,21 +23,42 @@ public class Cossiol extends Producte implements OperacionsSQL{
 		this.capacitat = capacitat;
 	}
 	
-	@Override
-	public String insert() {
+	/**
+	 * Creamos un metodo nuevo de insercion para no sobre escribir
+	 * el metodo inserir del padre. De esta manera podemos hacer que
+	 * sea el metodo del padre que capture el error.
+	 * @return
+	 * @throws StockException
+	 */
+	public String inserthijo() throws StockException {
 		// TODO Auto-generated method stub
+		System.out.println(super.insert() + getMaterial() + getCapacitat());						
 		return super.insert();
 	}
 	
-	@Override
-	public String delete() {
+	/**
+	 * Creamos un metodo nuevo de eliminacion para no sobre escribir
+	 * el metodo delete del padre. De esta manera podemos hacer que
+	 * sea el metodo del padre que capture el error.
+	 * @return
+	 * @throws StockException
+	 */
+	public String deletehijo() throws StockException {
 		// TODO Auto-generated method stub
+		System.out.println(super.delete() + getMaterial() + getCapacitat());
 		return super.delete();
 	}
 	
-	@Override
-	public String update() {
+	/**
+	 * Creamos un metodo nuevo de modificacion para no sobre escribir
+	 * el metodo update de padre. De esta manera podemos hacer que
+	 * sea el metodo del padre que capture el error.
+	 * @return
+	 * @throws StockException
+	 */
+	public String updatehijo() throws StockException {
 		// TODO Auto-generated method stub
+		System.out.println(super.update() + getMaterial() + getCapacitat());
 		return super.update();
 	}
 }
